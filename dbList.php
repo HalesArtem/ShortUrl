@@ -1,13 +1,8 @@
 <?php
+require_once 'classes/Url.php';
 require_once 'classes/DatabaseConnect.php';
 
-$pdo = new DatabaseConnect();
-
-$sql = 'select * from urlTable';
-
-$query = $pdo->connection->query($sql);
-
-$arrayUrls = $query->fetchAll(PDO::FETCH_ASSOC);
+$url = new Url();
 ?>
 <!doctype html>
 <html lang="en">
@@ -43,7 +38,7 @@ $arrayUrls = $query->fetchAll(PDO::FETCH_ASSOC);
             </tr>
             </thead>
             <tbody>
-            <?php foreach ($arrayUrls as $url): ?>
+            <?php foreach ($url->getAll() as $url): ?>
                 <tr>
                     <th scope="row"><?= $url['id'] ?></th>
                     <td><?= $url['originalUrl'] ?></td>

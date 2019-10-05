@@ -24,7 +24,7 @@ session_start();
         </nav>
     </div>
     <div id="content">
-        <form action="urls/treatment.php" method="post">
+        <form action="treatment.php" method="post">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Enter URL</label>
                 <input name="url" type="url" class="form-control" id="exampleFormControlInput1"
