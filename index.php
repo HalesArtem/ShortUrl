@@ -33,7 +33,7 @@ session_start();
                 <button type="submit" name="isset" value="1" class="btn btn-secondary">submit</button>
             </div>
         </form>
-        <?php if (isset($_SESSION)): ?>
+        <?php if (isset($_SESSION['shortUrl'])): ?>
             <a href="http://<?= $_SESSION['shortUrl'] ?>"
                class="btn btn-primary btn-lg btn-block"><?= $_SESSION['shortUrl'] ?></a>
         <?php endif; ?>
